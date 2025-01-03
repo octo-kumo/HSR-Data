@@ -9,12 +9,12 @@ from utils.helpers import get_path_from_avatar_base_type, get_slot_from_relic_ty
 HSR_VERSION = "2.7"
 
 STAR_RAIL_DATA_PATH = "src/data/repos/StarRailRes"
-LIGHT_CONE = STAR_RAIL_DATA_PATH + "/index_min/en/light_cones.json"
-RELIC_PIECE = STAR_RAIL_DATA_PATH + "/index_min/en/relics.json"
-RELIC_SET = STAR_RAIL_DATA_PATH + "/index_min/en/relic_sets.json"
-CHARACTERS = STAR_RAIL_DATA_PATH + "/index_min/en/characters.json"
-EIDOLONS = STAR_RAIL_DATA_PATH + "/index_min/en/character_ranks.json"
-SKILLS = STAR_RAIL_DATA_PATH + "/index_min/en/character_skills.json"
+LIGHT_CONE = STAR_RAIL_DATA_PATH + "/index_min/cn/light_cones.json"
+RELIC_PIECE = STAR_RAIL_DATA_PATH + "/index_min/cn/relics.json"
+RELIC_SET = STAR_RAIL_DATA_PATH + "/index_min/cn/relic_sets.json"
+CHARACTERS = STAR_RAIL_DATA_PATH + "/index_min/cn/characters.json"
+EIDOLONS = STAR_RAIL_DATA_PATH + "/index_min/cn/character_ranks.json"
+SKILLS = STAR_RAIL_DATA_PATH + "/index_min/cn/character_skills.json"
 
 
 def get_game_data(include_icons: bool) -> dict:
@@ -46,6 +46,7 @@ def get_game_data(include_icons: bool) -> dict:
         # check that all characters have a mini icon
         for name in characters:
             name = name.replace(" ", "")
+            print(name)
             name = "".join([c for c in name if c.isalnum()])
             if name.startswith("Trailblazer"):
                 for gender in ["#F", "#M"]:

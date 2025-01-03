@@ -73,6 +73,30 @@ def get_sro_mappings(game_data: dict, swap: bool = False):
     return sro_key_map
 
 
+def get_text_array(game_data: dict):
+    """Generate a text array of all character names, relic set names, and light cone names from game data.
+
+    :param game_data: The game data to generate the text array from.
+    :return: A list of names.
+    """
+    text_array = []
+
+    for name in sorted(game_data["characters"].keys()):
+        text_array.append(name)
+
+    relic_sets = set()
+    for relic in game_data["relics"].values():
+        relic_sets.add(relic["set"])
+
+    for relic_set in sorted(relic_sets):
+        text_array.append(relic_set)
+
+    for light_cone in sorted(game_data["light_cones"]):
+        text_array.append(light_cone)
+
+    return text_array
+
+
 def main():
     """Generate SRO character key mappings from game files and write it to output folder."""
     if not os.path.exists(os.path.join(OUTPUT_PATH, "game_data.json")):

@@ -8,8 +8,8 @@ OUTPUT_PATH = "output"
 
 # file paths as of https://github.com/Mar-7th/StarRailRes/commit/8d8f306 (Nov 14, 2023)
 STAR_RAIL_RES_PATH = "src/data/repos/StarRailRes"
-RELIC_MAIN_AFFIXES = STAR_RAIL_RES_PATH + "/index_new/en/relic_main_affixes.json"
-RELIC_SUB_AFFIXES = STAR_RAIL_RES_PATH + "/index_new/en/relic_sub_affixes.json"
+RELIC_MAIN_AFFIXES = STAR_RAIL_RES_PATH + "/index_new/cn/relic_main_affixes.json"
+RELIC_SUB_AFFIXES = STAR_RAIL_RES_PATH + "/index_new/cn/relic_sub_affixes.json"
 
 PROPERTY_TO_MAIN = {
     "HPDelta": "HP",
